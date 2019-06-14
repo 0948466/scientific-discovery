@@ -1,0 +1,16 @@
+.footer-menu {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto 38px;
+  max-width: 495px;
+  p {
+    margin-bottom: 10px;
+  }
+  .social__icon {
+    width: 30px;
+    height: 30px;
+  }
+  &__link {
+    opacity: .5;
+  }
+}

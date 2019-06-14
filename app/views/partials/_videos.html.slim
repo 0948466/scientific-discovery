@@ -1,0 +1,8 @@
+-if @discovery.images.exists?
+  section.videos
+    h2.title-h2-with-border Узнать больше о подобных открытиях
+    .videos__wrap
+      - @discovery.images.each do |video|
+        .videos__item
+          p.videos__item__text.text-md == video.name
+          iframe.videos__iframe src="#{video.video}"

@@ -1,0 +1,61 @@
+.title-h1 {
+  @include responsive-font-size(90);
+  font-weight: normal;
+  line-height: 1.2;
+  letter-spacing: -0.9px;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  @include w320-767 {
+    @include responsive-font-size(60);
+  }
+}
+.title-h2 {
+  @include titleH2;
+}
+.title-h2-with-border {
+  @include titleH2WithBorder;
+}
+
+.title-h3 {
+  @include responsive-font-size(30);
+  font-weight: normal;
+  line-height: 1.27;
+  letter-spacing: normal;
+  text-align: center;
+  color: #fff;
+}
+.text-md {
+  @include responsive-font-size(20);
+  font-weight: normal;
+  line-height: 1.45;
+  letter-spacing: normal;
+  color: #fff;
+}
+.text-sm {
+  @include responsive-font-size(12);
+  font-weight: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  color: #fff;
+}
+.border {
+  border: 6px solid #fff;
+}
+
+.btn-abs {
+  position: absolute;
+  top: -3px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: .67em 9px;
+  border-radius: 5px;
+  background-color: $color2;
+  @include responsive-font-size(12);
+  font-weight: bold;
+  line-height: 1.2;
+  letter-spacing: 0.1px;
+  color: #fff;
+  text-transform: uppercase;
+}

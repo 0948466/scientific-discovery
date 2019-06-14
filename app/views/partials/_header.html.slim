@@ -1,0 +1,8 @@
+header.main-header
+  .sponsor
+    = link_to 'http://eurekahd.tv/', target: '_blank', rel: 'noopener', class: 'logo-eu' do
+      = image_tag ('logo/logo-eureka.png'), alt: "Телеканал Эврика"
+    = link_to 'https://www.tricolor.tv/', target: '_blank', rel: 'noopener', class: 'logo-tri' do
+      = image_tag ('logo/logo-tricolor.png'), alt: "Телеканал Триколор"
+  = render 'partials/social'
+  .age-limit 12+

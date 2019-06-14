@@ -1,0 +1,5 @@
+.discoveries-top
+  h2.discoveries-top__title.title-h2 ==@discovery.decorate.date_discovery
+  p.discoveries-top__text.text-md ==@discovery.description
+  - if @discovery.image.present?
+    = image_tag @discovery.image.url(:original), alt: "Телеканал Триколор"

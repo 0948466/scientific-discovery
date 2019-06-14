@@ -1,0 +1,16 @@
+.form
+  = simple_form_for(@user, html: { class: "form-reg", autocomplete: 'off' }) do |f|
+    h3.form__title.text-md Заполните месяц и год вашего рождения <br>или любой другой, чтобы узнать:
+    .form-item
+      = f.input :date_birthday, as: :string, input_html: {type: 'text', required: true, class: 'datepicker inputBirthday', placeholder: 'Дата рождения', autocomplete: false}, required: 'true', label: false
+    h3.form__title.text-md Для участия в конкурсе укажите:
+    .form-item
+      = f.input :tel, input_html: {class: 'inputTel telmask'}, placeholder: 'Телефон', label: false, wrapper: false, required: true
+    .form-item
+      = f.input :email, input_html: {class: 'inputEmail'}, placeholder: 'E-mail', label: false, wrapper: false, required: true
+    .form-item.form-item_checkbox
+      .checkbox-wrap
+        input value="0" type="hidden" name="user[personal]"
+        input.checkbox__input.checkbox.checkboxRulesAccept#rules_accept name="user[personal]" type="checkbox" value="1"
+        label.checkbox__label.text-sm for="rules_accept" Принимаю #{link_to 'Положение', root_path << 'Положение_об_обработке_персональных_данных.docx', class: 'link-text'} и #{link_to 'Согласие', root_path << 'Согласие_на_обработку_персональных_данных.docx', class: 'link-text'} <br>на обработку персональных данных.
+    = f.button :submit, 'Узнать', class: "form__btn disabled inputSubmit", disabled: "disabled"

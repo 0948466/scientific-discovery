@@ -1,0 +1,5 @@
+= semantic_form_for :import, url: { action: 'import_xml' }, method: :put, multipart: true do |f|
+  ul style='margin-top: 20px'
+    = f.input :file, as: :file, label: false
+    = f.actions do
+      = f.action :submit, as: :button, label: "Импорт"

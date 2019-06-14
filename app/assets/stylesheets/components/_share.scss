@@ -1,0 +1,103 @@
+.share {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 106px;
+  max-width: 830px;
+  @include w320-767 {
+    flex-wrap: wrap;
+  }
+  &__wrap {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    margin-right: 88px;
+    max-width: 371px;
+    width: 100%;
+    height: 60px;
+    box-sizing: border-box;
+    background-image: linear-gradient(to right, #a70000 0%, #f90e01 100%);
+    border-radius: 30px;
+    @include w320-767 {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+  &__text {
+    padding: 0 10px;
+    margin-right: 27px;
+    @include responsive-font-size(18);
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 0.4px;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  .ya-share2__list {
+    display: flex;
+  }
+  .ya-share2__item {
+    margin-right: 6px;
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  .ya-share2__link {
+    display: block;
+    position: relative;
+    width: 35px;
+    height: 35px;
+    background-color: $colorIconSocial;
+    border-radius: 50%;
+    font-size: 0;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: transparent no-repeat center / 24%;
+      border-radius: 50%;
+    }
+  }
+
+  .ya-share2__item_service_vkontakte .ya-share2__link::after {
+      background-image: url(image_path("icons/icon-vk.png"));
+      background-size: 50%;
+    }
+  .ya-share2__item_service_facebook .ya-share2__link::after {
+      background-image: url(image_path("icons/icon-fb.png"));
+    }
+  .ya-share2__item_service_odnoklassniki .ya-share2__link::after {
+      background-image: url(image_path("icons/icon-od.png"));
+    }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    max-width: 371px;
+    width: 100%;
+    height: 60px;
+    box-sizing: border-box;
+    @include responsive-font-size(18);
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 0.4px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 30px;
+    border: 3px solid #ff0000;
+  }
+}

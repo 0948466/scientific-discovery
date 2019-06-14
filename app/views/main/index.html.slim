@@ -1,0 +1,10 @@
+- set_meta_tags title: "Постфактум",
+        description: "Научное открытие в ДР",
+        keywords: "Научное открытие в ДР, Постфактум"
+- set_meta_tags og: { type: 'website', title: "Постфактум", description: "Научное открытие в ДР", url: request.original_url }
+- set_meta_tags og: { image: "#{request.base_url}#{ image_path  ('og.png')}" }
+.wrap
+  = render 'partials/index-top'
+  .wrap-border
+    = render 'partials/prizes'
+    = render 'partials/instructions'

@@ -1,0 +1,41 @@
+.prizes {
+  &__title {
+    margin-bottom: 35px;
+  }
+  &__text {
+    margin: 0 auto 43.8px;
+    max-width: 500px;
+    @include responsive-font-size(12);
+    font-weight: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+    opacity: .5;
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 59px;
+    @include border;
+    border-right: none;
+    border-left: none;
+    @include w320-767 {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+    width: 370px;
+    height: 314px;
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+}

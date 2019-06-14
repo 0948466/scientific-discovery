@@ -1,0 +1,18 @@
+.index-top {
+  position: relative;
+  padding: 56px 20px;
+  margin-bottom: 108.6px;
+  @include border;
+  &__title {
+    margin-bottom: 22px;
+  }
+  &__text {
+    margin: 0 auto 36px;
+    text-align: center;
+    @include w320-767 {
+      br {
+        display: none;
+      }
+    }
+  }
+}

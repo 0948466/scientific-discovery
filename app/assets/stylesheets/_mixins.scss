@@ -1,0 +1,67 @@
+$w1920: 1920px;
+$w1000: 1000px;
+$w768: 768px;
+$w320: 320px;
+
+@mixin w1920 {
+  @media only screen and (min-width: #{$w1920}) {
+    @content;
+  }
+}
+@mixin w768-1919 {
+  @media only screen and (min-width: #{$w768}) and (max-width: #{$w1920 - 1px}) {
+    @content;
+  }
+}
+@mixin w768 {
+  @media only screen and (min-width: #{$w768}) {
+    @content;
+  }
+}
+@mixin w320-767 {
+  @media only screen and (max-width: #{$w768 - 1px}) {
+    @content;
+  }
+}
+@mixin w320-999 {
+  @media only screen and (max-width: #{$w1000 - 1px}) {
+    @content;
+  }
+}
+@mixin border {
+  border: 6px solid #fff;
+  background-color: rgba(0, 0, 0, .76);
+}
+@mixin btn {
+  border-radius: 5px;
+  background-color: $color2;
+  @include responsive-font-size(12);
+  font-weight: bold;
+  line-height: 1.2;
+  letter-spacing: 0.1px;
+  color: #fff;
+}
+@mixin titleH2 {
+  margin-bottom: 35px;
+  @include responsive-font-size(50);
+  font-weight: normal;
+  line-height: 1.2;
+  text-align: center;
+  color: #fff;
+
+}
+@mixin titleH2WithBorder {
+  @include titleH2;
+  position: relative;
+  padding-bottom: 28px;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 100px);
+    width: 200px;
+    height: 2px;
+    background-image: linear-gradient(to right, transparent 50%, $color2 50%);
+    background-size: 16px 100%;
+  }
+}

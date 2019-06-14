@@ -1,0 +1,13 @@
+$( function () {
+    $(".datepicker").datepicker({
+        changeYear: true,
+        changeMonth: true,
+        yearRange: '1950:2000',
+        dateFormat : 'dd.mm.yy',
+        defaultDate: '01.01.1985',
+        showOn: "both",
+        buttonImage: "<%= asset_path("icons/calendar-icon.png") %>",
+        buttonImageOnly: true,
+        buttonText: "Выбор даты"
+    });
+});

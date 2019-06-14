@@ -1,0 +1,30 @@
+.social {
+  display: flex;
+  margin: 0 40px 0 auto;
+  @include w320-767 {
+    display: none;
+  }
+}
+
+.social__icon {
+  display: block;
+  margin-right: 10px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: $colorIconSocial no-repeat center / 23%;
+  @include w320-767 {
+    width: 30px;
+    height: 30px;
+  }
+  &_vk {
+    background-image: url(image_path("icons/icon-vk.png"));
+    background-size: 50%;
+  }
+  &_fb {
+    background-image: url(image_path("icons/icon-fb.png"));
+  }
+  &_od {
+    background-image: url(image_path("icons/icon-od.png"));
+  }
+}

@@ -1,2 +1,1 @@
-# scientific-discovery
-часть кода scientific_discovery (rails/slim)
+Научное открытие в ДР

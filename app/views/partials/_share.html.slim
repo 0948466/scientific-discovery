@@ -1,0 +1,5 @@
+.share
+  .share__wrap
+    .share__text Поделиться
+    .ya-share2 data-services="vkontakte,facebook" data-title="#{@user.uid}" data-comment="#{@discovery.decorate.date_discovery} #{@discovery.description}" data-description="#{@discovery.decorate.date_discovery}#{@discovery.description}" data-image="#{request.base_url}#{ image_path  ('og.png')}" data-bare="true"
+  = link_to 'Узнать про другой день', root_path, class: 'share__link'

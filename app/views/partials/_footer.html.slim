@@ -1,0 +1,10 @@
+footer.main-footer
+  .container
+    p.main-footer__text.text-sm
+      |Акция «Постфактум» проходит с 18.02.2019 по 18.03.2019.<br>
+       С правилами акции, информацией об организаторах, призах, их количестве <br>
+       и порядке получения можно ознакомиться в #{link_to 'правилах акции «Постфактум»', root_path << 'Правила_для_сайта_согл.docx', class: 'link-text'}.<br>
+       Для зрителей старше 12 лет.
+    = render 'partials/postfactum'
+    = render 'partials/footer-menu'
+    = render 'partials/footer-copyright'

@@ -1,0 +1,10 @@
+.main-footer {
+  position: relative;
+  padding: 45px 0;
+  margin-top: auto;
+  background-color: #000;
+  &__text {
+    margin-bottom: 2em;
+    text-align: center;
+  }
+}

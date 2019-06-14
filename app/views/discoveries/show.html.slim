@@ -1,0 +1,11 @@
+- set_meta_tags title: "#{@user.uid}",
+        description: @discovery.description,
+        keywords: "Научное открытие в ДР, Постфактум"
+- set_meta_tags og: { type: 'website', title: "#{@user.uid}", description: @discovery.description, url: request.original_url }
+- set_meta_tags og: { image: "#{request.base_url}#{ image_path  ('og.png')}" }
+- set_meta_tags vk: { image: "#{request.base_url}#{ image_path  ('og.png')}" }
+.wrap
+  = render 'partials/discoveries-top'
+  = render 'partials/share'
+  = render 'partials/videos'
+

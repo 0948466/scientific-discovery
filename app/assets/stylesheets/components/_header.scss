@@ -1,0 +1,48 @@
+.main-header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0 60px;
+  .logo-eu {
+    margin-right: 39px;
+    img {
+      width: 61px;
+      height: 66px;
+      @include w320-767 {
+        width: 30.5px;
+        height: 33px;
+      }
+    }
+  }
+  .logo-tri {
+    img {
+      width: 249px;
+      height: 82px;
+      @include w320-767 {
+        width: 124.5px;
+        height: 41px;
+      }
+    }
+  }
+
+  .age-limit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    box-sizing: border-box;
+    border: 2px solid #b8becc;
+    @include responsive-font-size(18);
+    font-weight: normal;
+    letter-spacing: 0.5px;
+    color: #b8becc;
+    border-radius: 50%;
+    flex-shrink: 0;
+    @include w320-767 {
+      width: 30px;
+      height: 30px;
+      font-size: 12px;
+    }
+  }
+}
